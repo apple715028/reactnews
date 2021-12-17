@@ -3,7 +3,6 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link ,
 } from "react-router-dom";
 import Loadable from "react-loadable";
 import Load from '../components/loading/loading';
@@ -91,8 +90,7 @@ const Jump = props => {
         <div>
             <Navmenu/>
             <Routes>
-                <Route path='*' element={<NoMatch/>}/>
-                <Route path="/Home" element={<Home />} />
+                <Route exact path="/Home" element={<Home />} />
                 <Route path="/About" element={<About/>} />
                 <Route path="/Business" element={<Business/>}></Route>
                 <Route path="/Entertainment" element={<Entertainment/>}></Route>
@@ -100,6 +98,7 @@ const Jump = props => {
                 <Route path="/Science" element={<Science/>}></Route>
                 <Route path="/Sports" element={<Sports/>}></Route>
                 <Route path="/Technology" element={<Technology/>}></Route>
+                <Route path='*' element={<NoMatch/>}/>
             </Routes>
             </div>
       </Router>

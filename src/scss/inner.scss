@@ -117,9 +117,13 @@
         display: none;
     }
 }
+@media screen and (max-width: 980px) {
+    .th_businessnews {
+        padding: 0 15px;
+    }
+}
 @media screen and (max-width: 720px) {
    .th_businessnews {
-       padding: 0 15px;
        margin-top: 30px;
        .news_content2 {
            >header {

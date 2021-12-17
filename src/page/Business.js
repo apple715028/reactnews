@@ -30,13 +30,13 @@ const Business = () => {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
    
-        // Change page
-        console.log(indexOfLastPost,indexOfFirstPost)
-        const paginate = pageNumber => setCurrentPage(pageNumber);
+    // Change page
+    // console.log(indexOfLastPost,indexOfFirstPost)
+    const paginate = pageNumber => setCurrentPage(pageNumber);
     const Posts = () => {
         if( !loading) {
             const currentPosts = data.articles.slice(indexOfFirstPost, indexOfLastPost);
-            console.log(currentPosts);
+            // console.log(currentPosts);
             return   currentPosts
         }else {
             return<div><Load/></div>
