@@ -1,0 +1,103 @@
+
+h2 {
+    width: 100%;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+.th_news {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+    ul {
+        width: 100%;
+        list-style-type: none;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        width: calc(33.33% - 20px);
+        float: left;
+        margin: 10px;
+        // border: 1px solid #afacac;
+         border-radius: 10px;
+         padding: 10px;
+         overflow: hidden;
+        a {
+            display: inline-block;
+            width: 100%;
+        }
+        div {
+            display: inline-block;
+        }
+        &:hover {
+            .news_content {
+               header {
+                   figure {
+                       transform: scale(1.2);
+                   }
+               }
+            }
+        }
+    }
+}
+.news_content {
+    width: 100%;
+    float: left;
+    position: relative;
+    header {
+        width: 100%;
+        padding-top: 56.19%;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        figure {
+            position: absolute;
+            top:0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:  center;
+            margin: auto;
+            transition:cubic-bezier(0.19, 1, 0.22, 1) .3s;
+        }
+    }
+    div {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background:rgba($color: #000000, $alpha: .8);
+    }
+    .title_new {
+        padding: 0 10px;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #fff;;
+        width: 100%;
+        float: left;
+    }
+}
+@media screen and (max-width: 980px) {
+    .th_news {
+        li {
+            margin: 10px;
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .th_news {
+        li {
+            width: 100%;
+            margin: 10px auto;
+        }
+    }
+}
