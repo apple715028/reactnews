@@ -30,6 +30,9 @@ const Navmenu = props => {
                 <li> 
                     <NavLink to="/Technology" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>技術</NavLink> 
                 </li>
+                <li> 
+                    <NavLink to="/Travel" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>旅遊</NavLink> 
+                </li>
             </ul>
         </nav>
     )

@@ -65,6 +65,12 @@ const Jump = props => {
         return<Load></Load>
     }
     });
+    const Travel = Loadable({
+      loader: () => import('../page/Travel'),
+      loading() {
+          return<Load></Load>
+      }
+    });
   const NoMatch = Loadable({
     loader: () => import('../page/NoMatch'),
     loading() {
@@ -93,6 +99,7 @@ const Jump = props => {
                 <Route path="/Science" element={<Science/>}></Route>
                 <Route path="/Sports" element={<Sports/>}></Route>
                 <Route path="/Technology" element={<Technology/>}></Route>
+                <Route path="/Travel" element={<Travel/>}></Route>
                 <Route path='*' element={<NoMatch/>}/>
             </Routes>
             </div>
