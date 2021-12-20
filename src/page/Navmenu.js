@@ -7,7 +7,7 @@ const Navmenu = props => {
         <nav>
             <ul>
                 <li> 
-                    <NavLink to="/Home" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>即時新聞</NavLink>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>即時新聞</NavLink>
                 </li>
                 <li className="hidde"> 
                     <NavLink to="/About" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>新聞集</NavLink> 

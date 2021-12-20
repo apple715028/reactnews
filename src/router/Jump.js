@@ -7,6 +7,7 @@ import {
 import Loadable from "react-loadable";
 import Load from '../components/loading/loading';
 import Navmenu from '../page/Navmenu';
+import Home from '../page/Home';
 
 const Jump = props => {
 
@@ -22,12 +23,6 @@ const Jump = props => {
 //   // 如果loading較慢時，要render的component
 //   loading: Loading
 // });
- const Home = Loadable({
-    loader: () => import('../page/Home'),
-    loading() {
-        return<Load></Load>
-      }
-  });
  const About = Loadable({
     loader: () => import('../page/About'),
     loading() {
@@ -90,7 +85,7 @@ const Jump = props => {
         <div>
             <Navmenu/>
             <Routes>
-                <Route exact path="/Home" element={<Home />} />
+                <Route exact path="/" element={<Home />} />
                 <Route path="/About" element={<About/>} />
                 <Route path="/Business" element={<Business/>}></Route>
                 <Route path="/Entertainment" element={<Entertainment/>}></Route>
