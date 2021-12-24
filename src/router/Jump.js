@@ -8,6 +8,7 @@ import Loadable from "react-loadable";
 import Load from '../components/loading/loading';
 import Navmenu from '../page/Navmenu';
 import Home from '../page/Home';
+import Taipei from '../page/Travel/Taipei';
 
 const Jump = props => {
 
@@ -98,8 +99,10 @@ const Jump = props => {
                 <Route path="/Healthy" element={<Healthy/>}></Route>
                 <Route path="/Science" element={<Science/>}></Route>
                 <Route path="/Sports" element={<Sports/>}></Route>
-                <Route path="/Technology" element={<Technology/>}></Route>
-                <Route path="/Travel" element={<Travel/>}></Route>
+                <Route path="/Technology" element={<Technology/>}></Route> 
+                <Route path={'Travel'}>
+                  <Route path="/Travel/Taipei" element={<Taipei/>}></Route>
+                </Route>
                 <Route path='*' element={<NoMatch/>}/>
             </Routes>
             </div>

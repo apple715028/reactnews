@@ -1,6 +1,12 @@
 import React from 'react';
-import {NavLink ,useLocation  } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    NavLink ,
+    Link  } from "react-router-dom";
 import "../scss/nav.scss";
+import Taipei from '../page/Travel/Taipei';
 const Navmenu = props => {
 
     return(
@@ -31,7 +37,10 @@ const Navmenu = props => {
                     <NavLink to="/Technology" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>技術</NavLink> 
                 </li>
                 <li> 
-                    <NavLink to="/Travel" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>旅遊</NavLink> 
+                    <span className={({ isActive }) => (isActive ? 'active' : 'inactive')}>旅遊</span> 
+                    <ul className='childmenu'>
+                        <li><Link to="/Travel/Taipei">台北</Link> </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
